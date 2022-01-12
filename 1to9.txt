@@ -1,0 +1,27 @@
+      last
+{⍵[(≢⍵)+¯1]}
+      last_two
+{⍵[(≢⍵)+¯2 ¯1]}
+      at
+{⍺⊃⍵}
+    len      
+{⍴⍵}
+      reverse
+{⌽⍵}
+      is_palindrome
+{∧/(⌽⍵)=⍵}
+      flatten
+{⊃,/⍵}
+      compress
+{flatten∪⍵}
+      pack
+{↑¨(⍵⊆⍨↑)¨(∪↓(⍵∘.=⍵))}
+
+      pack2 
+{↑⍤flatten¨(⍵⊆⍨↑)¨(∪↓(⍵∘.=⍵))}
+
+      hel
+{(len ⍵),⊃⍵}
+
+encode ← {↑⍤hel¨ pack2 ⍵}
+
